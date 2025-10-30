@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jawed Tahir - Site en construction</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <img src="images/logo_smaller.png" alt="Logo" class="logo">
+    </nav>
+
+    <main>
+        <h1 id="typewriter"></h1>
+
+        <div class="game-container">
+            <div class="score-display">Score: <span id="score">0</span></div>
+            <div class="game-area">
+                <div class="game-wrapper">
+                    <canvas id="gameCanvas" width="400" height="400"></canvas>
+                    <div id="gameOverlay" class="game-overlay">
+                        <button id="playBtn">Play</button>
+                    </div>
+                </div>
+                <div class="mobile-controls">
+                    <button class="control-btn" id="btnUp">▲</button>
+                    <div class="control-row">
+                        <button class="control-btn" id="btnLeft">◄</button>
+                        <button class="control-btn" id="btnDown">▼</button>
+                        <button class="control-btn" id="btnRight">►</button>
+                    </div>
+                </div>
+            </div>
+            <button id="restartBtn">Recommencer</button>
+            <div class="code-display">
+                <pre id="codeOutput"></pre>
+            </div>
+        </div>
+
+        <div class="author-section">
+            <img src="images/jawed-tahir.jpg" alt="Jawed Tahir" class="author-photo">
+            <p class="message">À bientôt !</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>By Javed</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
