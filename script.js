@@ -127,13 +127,13 @@ function teleportSnake() {
 function update() {
     if (gameOver) return;
 
-    const head = { x: snake[0].x + dx, y: snake[0].y + dy };
+    let head = { x: snake[0].x + dx, y: snake[0].y + dy };
 
-    // Collision avec les murs
-    if (head.x < 0 || head.x >= tileCount || head.y < 0 || head.y >= tileCount) {
-        endGame();
-        return;
-    }
+    // Traversée des parois (téléportation)
+    if (head.x < 0) head.x = tileCount - 1;
+    if (head.x >= tileCount) head.x = 0;
+    if (head.y < 0) head.y = tileCount - 1;
+    if (head.y >= tileCount) head.y = 0;
 
     // Collision avec soi-même
     if (snake.some(segment => segment.x === head.x && segment.y === head.y)) {
